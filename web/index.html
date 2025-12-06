@@ -1,11 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem-te-vi - Gerenciamento de redes</title>
+    <title>Bem-te-vi! - Gerenciador de Redes</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>🦅 Bem-te-vi! | Gerenciador de Redes e Dispositivos</h1>
+        <p>Inventário e monitoramento de conectividade via PING.</p>
+    </header>
+    <main>
+        <div id="cadastro">
+            <h2>➕ Cadastro de Dispositivo</h2>
+            <form id="form-cadastro">
+                <div><label for="nome">Nome:</label><input type="text" id="nome" required></div>
+                <div><label for="endereco_ip">Endereço IP:</label><input type="text" id="endereco_ip" pattern="^(\d{1,3}\.){3}\d{1,3}$" required title="Formato de IP: Ex: 192.168.1.1"></div>
+                <div>
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" required>
+                        <option value="" disabled selected>Selecione o Tipo</option>
+                        <option value="Servidor">Servidor</option>
+                        <option value="Roteador">Roteador</option>
+                        <option value="Impressora">Impressora</option>
+                        <option value="PC">PC</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                </div>
+                <button type="submit">Cadastrar Dispositivo</button>
+            </form>
+            <p id="feedback-cadastro"></p>
+        </div>
+        <hr>
+        <div id="painel">
+            <h2>🖥️ Painel de Monitoramento</h2>
+            <table id="tabela-dispositivos">
+                <thead>
+                    <tr><th>ID</th><th>Nome</th><th>IP</th><th>Tipo</th><th>Status</th><th>Latência (ms)</th><th>Último Teste</th><th>Ações</th></tr>
+                </thead>
+                <tbody id="lista-dispositivos">
+                    <tr><td colspan="8">Carregando dispositivos...</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <div id="historico" style="display: none;">
+            <h2>📜 Histórico de Testes: <span id="historico-nome-dispositivo"></span></h2>
+            <button id="voltar-painel">Voltar ao Painel</button>
+            <table id="tabela-historico">
+                <thead>
+                    <tr><th>Status</th><th>Latência (ms)</th><th>Data/Hora</th></tr>
+                </thead>
+                <tbody id="lista-historico"></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
