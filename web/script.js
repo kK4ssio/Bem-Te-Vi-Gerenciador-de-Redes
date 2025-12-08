@@ -1,8 +1,6 @@
-// /web/script.js
-
 const API_URL = 'http://localhost:3000'; 
 
-// Elementos DOM
+
 const listaDispositivos = document.getElementById('lista-dispositivos');
 const formCadastro = document.getElementById('form-cadastro');
 const feedbackCadastro = document.getElementById('feedback-cadastro');
@@ -13,7 +11,7 @@ const listaHistorico = document.getElementById('lista-historico');
 const btnVoltarPainel = document.getElementById('voltar-painel');
 
 
-// --- 1. FUNÇÃO DE CARREGAMENTO E RENDERIZAÇÃO ---
+
 async function carregarDispositivos() {
     listaDispositivos.innerHTML = '<tr><td colspan="8">Carregando dispositivos...</td></tr>';
     
@@ -37,7 +35,7 @@ async function carregarDispositivos() {
 
     } catch (error) {
         console.error("Erro ao carregar dispositivos:", error);
-        listaDispositivos.innerHTML = `<tr><td colspan="8" class="status-falha">❌ Erro ao conectar à API. Verifique se o Back-end está rodando.</td></tr>`;
+        listaDispositivos.innerHTML = `<tr><td colspan="8" class="status-falha"> Erro ao conectar à API. Verifique se o Back-end está rodando.</td></tr>`;
     }
 }
 
@@ -73,7 +71,7 @@ function criarLinhaDispositivo(device) {
     return row;
 }
 
-// --- 2. FUNCIONALIDADE DE CADASTRO ---
+
 formCadastro.addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -94,22 +92,22 @@ formCadastro.addEventListener('submit', async (e) => {
         
         if (response.ok) {
             feedbackCadastro.className = 'status-sucesso';
-            feedbackCadastro.textContent = `✅ ${data.message}`;
+            feedbackCadastro.textContent = ` ${data.message}`;
             formCadastro.reset(); 
             carregarDispositivos(); 
         } else {
             feedbackCadastro.className = 'status-falha';
-            feedbackCadastro.textContent = `❌ Erro: ${data.message}`;
+            feedbackCadastro.textContent = ` Erro: ${data.message}`;
         }
     } catch (error) {
         feedbackCadastro.className = 'status-falha';
-        feedbackCadastro.textContent = '❌ Erro de conexão com o servidor.';
+        feedbackCadastro.textContent = ' Erro de conexão com o servidor.';
         console.error('Erro de conexão:', error);
     }
 });
 
 
-// --- 3. FUNCIONALIDADE DE TESTE DE CONECTIVIDADE ---
+
 async function executarTeste(deviceId) {
     const btn = document.querySelector(`.btn-teste[data-id="${deviceId}"]`);
     const originalText = btn.textContent;
@@ -136,7 +134,7 @@ async function executarTeste(deviceId) {
 }
 
 
-// --- 4. FUNCIONALIDADE DE HISTÓRICO ---
+
 async function exibirHistorico(deviceId, deviceNome) {
     divPainel.style.display = 'none';
     divHistorico.style.display = 'block';
@@ -177,12 +175,12 @@ async function exibirHistorico(deviceId, deviceNome) {
     }
 }
 
-// 5. Controle de Navegação
+
 btnVoltarPainel.addEventListener('click', () => {
     divHistorico.style.display = 'none';
     divPainel.style.display = 'block';
 });
 
 
-// INICIALIZAÇÃO
+
 document.addEventListener('DOMContentLoaded', carregarDispositivos);

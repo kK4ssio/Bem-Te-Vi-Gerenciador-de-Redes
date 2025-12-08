@@ -1,10 +1,9 @@
-// /server/routes/devices.js
 const express = require('express');
 const router = express.Router();
 const db = require('../db'); 
 const ping = require('ping'); 
 
-// --- 1. Rota de Cadastro de Dispositivos (POST /devices) ---
+
 router.post('/', async (req, res) => {
     const { nome, endereco_ip, tipo } = req.body;
 
@@ -38,7 +37,7 @@ router.post('/', async (req, res) => {
     }
 });
 
-// --- 2. Rota de Listagem de Dispositivos com Último Status (GET /devices) ---
+
 router.get('/', async (req, res) => {
     const sql = `
         SELECT
@@ -68,7 +67,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// --- 3. Rota de Teste de PING e Log (POST /devices/:id/test) ---
+
 router.post('/:id/test', async (req, res) => {
     const deviceId = req.params.id;
 
@@ -84,7 +83,6 @@ router.post('/:id/test', async (req, res) => {
 
         const ipAddress = deviceResult[0].endereco_ip;
 
-        // Executa o PING
         const pingResult = await ping.promise.probe(ipAddress, { timeout: 3 }); 
 
         let status;
@@ -97,7 +95,7 @@ router.post('/:id/test', async (req, res) => {
             status = 'falha';
         }
 
-        // Salva o Resultado
+  
         const sqlInsert = `
             INSERT INTO tests (device_id, status, latencia)
             VALUES (?, ?, ?);
@@ -116,7 +114,7 @@ router.post('/:id/test', async (req, res) => {
     }
 });
 
-// --- 4. Rota de Histórico de Testes (GET /devices/:id/tests) ---
+
 router.get('/:id/tests', async (req, res) => {
     const deviceId = req.params.id;
 
