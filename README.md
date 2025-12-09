@@ -90,6 +90,7 @@ Este guia detalha os passos para configurar e rodar a aplicação no ambiente Wi
 Abra seu terminal (CMD ou PowerShell) e clone o projeto:
 
 ```bash
-git clone [URL_DO_SEU_REPOSITORIO]
+git clone https://github.com/kK4ssio/Bem-Te-Vi-Gerenciador-de-Redes.git
 cd Bem-Te-Vi-Gerenciador-de-Redes
+
 
