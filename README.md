@@ -80,6 +80,12 @@ Este guia detalha os passos para configurar e rodar a aplicação no ambiente Wi
 ### **Pré-requisitos**
 
 1.  **Node.js e npm:** Necessário para rodar o servidor Back-end.
+```bash
+npm install express mysql2 cors ping
+
+node server.js
+
+```  
 2.  **MySQL Server:** Necessário para o banco de dados.
 3.  **MySQL Workbench:** Ferramenta recomendada para gerenciar o banco.
 
@@ -92,5 +98,6 @@ Abra seu terminal (CMD ou PowerShell) e clone o projeto:
 ```bash
 git clone https://github.com/kK4ssio/Bem-Te-Vi-Gerenciador-de-Redes.git
 cd Bem-Te-Vi-Gerenciador-de-Redes
+
 
 
