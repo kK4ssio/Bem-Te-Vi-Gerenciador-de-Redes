@@ -9,7 +9,7 @@ body {
 }
 
 header {
-   border: 1px solid rgba(245, 245, 245, 0.342);
+  border: 1px solid rgba(245, 245, 245, 0.342);
   box-shadow: 0 1px 5px #ccccccbe;
   color: aliceblue;
   padding: 20px;
@@ -48,10 +48,10 @@ div#historico {
   margin-bottom: 30px;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 50px;
   border: 1px solid rgba(245, 245, 245, 0.342);
   box-shadow: 0 1px 8px #ccccccc5;
+  backdrop-filter: blur(15px);
 }
 
 #form-cadastro div {
@@ -75,8 +75,9 @@ div#historico {
   font-size: 1em;
   border: 1px solid rgba(245, 245, 245, 0.342);
   box-shadow: 0 1px 5px #ccccccbe;
-    background-color: rgba(255, 255, 255, 0.24);
-    color: aliceblue;
+  background-color: rgba(255, 255, 255, 0.24);
+  backdrop-filter: blur(15px);
+  color: aliceblue;
 }
 
 #feedback-cadastro {
@@ -90,7 +91,7 @@ button {
   border: 1px solid rgba(245, 245, 245, 0.342);
   box-shadow: 0 1px 5px #ccccccbe;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   cursor: pointer;
 }
