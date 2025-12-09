@@ -2,7 +2,7 @@
 
 **Nome do Projeto**: Bem-Te-Vi! | Gerenciador de Redes e Dispositivos.
 
-[cite_start]O objetivo do projeto é facilitar o **inventário de dispositivos** e o **monitoramento de status de rede** [cite: 10] [cite_start]por meio de uma interface visualmente funcional e limpa [cite: 10][cite_start], eliminando a necessidade de usar o terminal para testes de conectividade[cite: 6].
+O objetivo do projeto é facilitar o **inventário de dispositivos** e o **monitoramento de status de rede**  por meio de uma interface visualmente funcional e limpa, eliminando a necessidade de usar o terminal para testes de conectividade.
 
 **Responsáveis**:
 
@@ -22,38 +22,38 @@
 
 ### **1.1. Objetivo e Escopo**
 
-[cite_start]O sistema "Bem-Te-vi!" tem como finalidade facilitar a execução de **testes de conectividade** e a **geração de relatórios de rede**[cite: 6]. [cite_start]O projeto torna mais simples o inventário de dispositivos e monitoramento de status de rede [cite: 10][cite_start], exibindo as informações de forma visualmente compreensível[cite: 8].
+O sistema "Bem-Te-vi!" tem como finalidade facilitar a execução de **testes de conectividade** e a **geração de relatórios de rede**.O projeto torna mais simples o inventário de dispositivos e monitoramento de status de rede , exibindo as informações de forma visualmente compreensível.
 
 O sistema permite gerenciar:
-* [cite_start]Cadastro, alteração e remoção de dispositivos registrados na rede (Inventário)[cite: 13].
-* [cite_start]Verificação do status de rede e monitoramento em tempo real[cite: 12].
+* Cadastro, alteração e remoção de dispositivos registrados na rede (Inventário).
+* Verificação do status de rede e monitoramento em tempo real.
 
 ### **2. Requisitos Funcionais**
 
 ### **2.1. Cadastro e Gerenciamento de Dispositivos**
-* [cite_start]O sistema deve permitir o **cadastro de dispositivos**[cite: 23].
-* [cite_start]O sistema deve prover ferramentas capazes de **inventariar, alterar e remover dispositivos**[cite: 13].
-* [cite_start]O sistema deve exibir o **status de rede** (conectividade) do dispositivo[cite: 12].
+* O sistema deve permitir o **cadastro de dispositivos**.
+* O sistema deve prover ferramentas capazes de **inventariar, alterar e remover dispositivos**.
+* O sistema deve exibir o **status de rede** (conectividade) do dispositivo.
 
 ### **2.2. Monitoramento de Conectividade e LOGS**
-* [cite_start]O sistema deve permitir a realização de **testes de conectividade via PING**[cite: 25].
-* [cite_start]O sistema deve **armazenar LOGS** de testes[cite: 26].
-* [cite_start]O sistema deve permitir a **listagem de status de rede** [cite: 24] [cite_start]e a consulta via web[cite: 27].
+* O sistema deve permitir a realização de **testes de conectividade via PING**.
+* O sistema deve **armazenar LOGS** de testes.
+* O sistema deve permitir a **listagem de status de rede** e a consulta via web.
 
 ### **3. Requisitos Não Funcionais**
 
 ### **3.1. Usabilidade e Interface**
-* [cite_start]O sistema deve possuir uma **interface simples e intuitiva**, com o objetivo de oferecer melhor legibilidade e compreensão das informações exibidas[cite: 14].
+* O sistema deve possuir uma **interface simples e intuitiva**, com o objetivo de oferecer melhor legibilidade e compreensão das informações exibidas.
 
 ### **3.2. Metodologia**
-* [cite_start]O projeto utiliza **HTML e CSS para o Front-end** e **JAVASCRIPT para o Back-end**[cite: 19].
-* [cite_start]O sistema utiliza **Banco de Dados MySQL**[cite: 20].
+* O projeto utiliza **HTML e CSS para o Front-end** e **JAVASCRIPT para o Back-end**.
+* O sistema utiliza **Banco de Dados MySQL**.
 
 ***
 
 ## Tecnologias Utilizadas
 
-[cite_start]O projeto utiliza uma estrutura-base simples e minimalista[cite: 19], sendo baseado em Node.js para o back-end e MySQL para persistência de dados.
+* O projeto utiliza uma estrutura-base simples e minimalista, sendo baseado em Node.js para o back-end e MySQL para persistência de dados.
 
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 
@@ -92,3 +92,4 @@ Abra seu terminal (CMD ou PowerShell) e clone o projeto:
 ```bash
 git clone [URL_DO_SEU_REPOSITORIO]
 cd Bem-Te-Vi-Gerenciador-de-Redes
+
